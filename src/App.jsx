@@ -37,7 +37,7 @@ function App() {
         <Route path='/profile' element={token ? <Profile /> : <Navigate to="/login" /> } />
         <Route path='/change-password' element={token ? <ChangePassword /> : <Navigate to="/login" /> } />
         <Route path='/forgot-password' element={<ForgotPassword  />} />
-        <Route path='/reset-password/:token' element={token ? <ResetPassword /> : <Navigate to="/login" /> } />
+        <Route path='/reset-password/:token' element={<ResetPassword /> } />
         <Route path='*' element={<NotFound />} />
 
 
