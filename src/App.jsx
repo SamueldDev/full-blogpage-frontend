@@ -13,6 +13,7 @@ import Home from './pages/Home'
 import ChangePassword from './pages/ChangePassword'
 import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
+import NotFound from './pages/Notfound'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/change-password' element={token ? <ChangePassword /> : <Navigate to="/login" /> } />
         <Route path='/forgot-password' element={<ForgotPassword  />} />
         <Route path='/reset-password/:token' element={token ? <ResetPassword /> : <Navigate to="/login" /> } />
+        <Route path='*' element={<NotFound />} />
 
 
       </Routes>
