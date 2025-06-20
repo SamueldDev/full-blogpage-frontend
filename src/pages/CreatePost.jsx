@@ -2,7 +2,7 @@
 
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../api/axios";
 
 
@@ -28,6 +28,14 @@ const CreatePost = () => {
   };
 
   return (
+    <>
+     <Link
+        to="/dashboard"
+        className="text-blue-600 hover:underline"
+        >
+        Back to Dashboard
+    </Link>
+
     <div className="flex justify-center items-start min-h-screen bg-gray-100 pt-10">
       <form
         onSubmit={handleSubmit}
@@ -81,6 +89,9 @@ const CreatePost = () => {
         </button>
       </form>
     </div>
+
+    </>
+    
   );
 };
 

@@ -1,7 +1,7 @@
 
 
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context";
 
 // import axios from "axios";
@@ -38,6 +38,13 @@ const Register = () => {
   };
 
   return (
+    <>
+    <Link
+        to="/"
+        className="text-blue-600 hover:underline"
+        >
+        Back to Home
+    </Link>
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <form
         onSubmit={handleSubmit}
@@ -98,6 +105,10 @@ const Register = () => {
         </p>
       </form>
     </div>
+    
+    </>
+
+    
   );
 };
 

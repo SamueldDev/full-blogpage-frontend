@@ -56,7 +56,16 @@ const Profile = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-12 p-6 bg-white rounded shadow">
+
+    <>
+        <Link
+            to="/dashboard"
+            className="text-blue-600 hover:underline"
+            >
+            Back to Dashboard
+        </Link>
+        <div className="max-w-xl mx-auto mt-12 p-6 bg-white rounded shadow">
+    
       <h1 className="text-3xl font-bold mb-4">My Profile</h1>
 
       {error && <p className="text-red-500 mb-2">{error}</p>}
@@ -82,10 +91,6 @@ const Profile = () => {
         </button>
       </div>
 
-      {/* <div className="mb-4 text-gray-700">
-        <p><strong>Name:</strong> {user?.name}</p>
-        <p><strong>Email:</strong> {user?.email}</p>
-      </div> */}
 
     {/* <div className="mb-4 space-y-3">
         <div>
@@ -124,6 +129,8 @@ const Profile = () => {
         </button>
       </div>
     </div>
+    </>
+    
   );
 };
 

@@ -15,6 +15,9 @@ import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
 import NotFound from './pages/Notfound'
 
+
+import SinglePosts from './pages/SinglePosts'
+
 function App() {
 
   const { token } = useContext(AuthContext)
@@ -39,6 +42,9 @@ function App() {
         <Route path='/forgot-password' element={<ForgotPassword  />} />
         <Route path='/reset-password/:token' element={<ResetPassword /> } />
         <Route path='*' element={<NotFound />} />
+
+     
+        <Route path='/posts/:id' element={<SinglePosts />} />
 
 
       </Routes>
