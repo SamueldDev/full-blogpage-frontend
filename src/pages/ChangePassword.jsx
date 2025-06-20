@@ -1,7 +1,7 @@
 
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import api from "../api/axios";
 
@@ -34,7 +34,16 @@ const ChangePassword = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-16 p-6 bg-white rounded shadow">
+
+    <>
+     <Link
+        to="/dashboard"
+        className="text-blue-600 hover:underline"
+        >
+        Back to Dashboard
+      </Link>
+
+         <div className="max-w-md mx-auto mt-16 p-6 bg-white rounded shadow">
       <h2 className="text-2xl font-bold mb-4">Change Password</h2>
 
       {error && <p className="text-red-600">{error}</p>}
@@ -69,6 +78,9 @@ const ChangePassword = () => {
         </button>
       </form>
     </div>
+
+    </>
+
   );
 };
 

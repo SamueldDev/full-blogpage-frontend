@@ -72,7 +72,7 @@ const Profile = () => {
 
       <div className="flex flex-col items-center space-y-4 mb-6">
         <img
-          src={user?.profileImage || "https://via.placeholder.com/100"}
+          src={user?.profileImage || "https://ui-avatars.com/api/?name=Guest+User"}
           alt="Profile"
           className="w-24 h-24 rounded-full object-cover"
         />
@@ -91,27 +91,6 @@ const Profile = () => {
         </button>
       </div>
 
-
-    {/* <div className="mb-4 space-y-3">
-        <div>
-            <label className="block text-sm text-gray-600 mb-1">Name</label>
-            <input
-            type="text"
-            value={user?.name || ""}
-            disabled
-            className="w-full px-3 py-2 border rounded bg-gray-100"
-            />
-        </div>
-        <div>
-            <label className="block text-sm text-gray-600 mb-1">Email</label>
-            <input
-            type="email"
-            value={user?.email || ""}
-            disabled
-            className="w-full px-3 py-2 border rounded bg-gray-100"
-            />
-        </div>
-    </div> */}
 
         <Link
             to="/change-password"
